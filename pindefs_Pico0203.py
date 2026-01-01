@@ -1,0 +1,61 @@
+# Definitions for IB Pico projects
+
+# GPIOs
+
+# Thes for Waveshare (B) MCP interface
+PIN_CAN_MISO = const(12)
+PIN_CAN_CS0 =  const(13)
+PIN_CAN_CLK =  const(10)
+PIN_CAN_MOSI = const(11)
+PIN_CAN_INT1 = const(14)
+
+# These for CBUS configuration
+PIN_LED_YEL =  const(15)
+PIN_LED_GRN =  const(9)
+PIN_LED_RED =  const(8)
+PIN_SW1 =      const(22)
+
+# Level crossing warning lights
+PIN_WRN_GRN =  const(0)
+PIN_WRN_BLU =  const(1)
+PIN_WRN_RED =  const(2)
+PIN_WRN_YEL =  const(3)
+
+# Level crossing barrier servos
+# Note that adjacent pairs of pins must share PWM frequency
+# Probably not an issue, but nearside and offside barriers grouped sparately
+PIN_BAR_NRS0 =  const(4)
+PIN_BAR_NRS1 =  const(5)
+PIN_BAR_OFS0 =  const(6)
+PIN_BAR_OFS1 =  const(7)
+
+# For sound player
+PIN_SND_TXD = const(16)
+PIN_SND_RXD = const(17)
+PIN_SND_BSY = const(18)
+
+
+PIN_TST_LED = const(25)
+
+# For output block 0 Const value is GPIO number
+PIN_OP_0 = const(0) # IO1
+PIN_OP_1 = const(1) # IO2
+PIN_OP_2 = const(2) # IO3
+PIN_OP_3 = const(3) # IO4
+PIN_OP_4 = const(4) # IO5
+PIN_OP_5 = const(5) # IO6
+PIN_OP_6 = const(6) # IO7
+PIN_OP_7 = const(7) # IO8
+
+# For output block 1 Const value is GPIO number
+PIN_OP_8 = const(16) # IO9
+PIN_OP_9 = const(17) # IO10
+PIN_OP_10 = const(18) # IO11
+PIN_OP_11 = const(19) # IO12
+PIN_OP_12 = const(20) # IO13
+PIN_OP_13 = const(21) # IO14
+PIN_OP_14 = const(27) # IO15
+PIN_OP_15 = const(26) # IO16
+
+#Array of the above
+#PIN_OPS = [PIN_OP_0, PIN_OP_1, PIN_OP_2, PIN_OP_3, PIN_OP_4, PIN_OP_5, PIN_OP_6, PIN_OP_7,PIN_OP_8, PIN_OP_9, PIN_OP_10, PIN_OP_11, PIN_OP_12, PIN_OP_13, PIN_OP_14, PIN_OP_15]
