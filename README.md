@@ -6,7 +6,7 @@ The code takes the signal ID (within the scope of the Pico board) and aspect fro
 ****** UNDER DEVELOPMENT *******
 Not recommnded for use by others quite yet!
 
-Issues under the Creative Commons share-alike license
+Issued under the Creative Commons share-alike license
 https://creativecommons.org/licenses/by-sa/4.0/deed.en
 
 Ian Blair January 2026
