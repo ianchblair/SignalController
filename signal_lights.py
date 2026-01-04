@@ -23,20 +23,20 @@ class signal_lights():
         self.logger = logger.logger()
                 
     def _init_signal_head(self, sigpins):
-        for i in range (sizeof(sigpins)):
+        for i in range (len(sigpins)):
             self._signal_pin[i] = Pin(pins[i],Pin.OUT)
             #try self._signal_pin[i] = Pin(pins[i],Pin.OUT)  
     
     def create_signals(self, signals):
-        for j in range(sizeof(signals)):
+        for j in range(len(signals)):
             signal = signals[j]
             self._init_signal_head(signal)
              
     def set_signal(self, signal, aspect):
-        for j in range (sizeof(sigdefs)):
+        for j in range (len(sigdefs)):
             sigdef = sigdefs[j]
             pins = _saved_pins[signal]
-            for i in range (sizeof(pins)):
+            for i in range (len(pins)):
                 #get pin table for this signal
                 if (aspect == _RED): self._signal_pin[rsdefs._red_aspect_led].value = _LED_ON
                 else: self._signal_pin[rsdefs._red_aspect_led].value = _LED_OFF
@@ -55,7 +55,7 @@ class signal_lights():
 
     def clear_signal(self, signal):
         pins = _saved_pins[signal]
-        for i in range (sizeof(pins)):
+        for i in range (len(pins)):
             self._signal_pin[i].value = _LED_OFF
 
             

@@ -114,4 +114,4 @@ SIG4B4 = dict(_red_aspect=pins.PIN_OP_12, _green_aspect=pins.PIN_OP_13,
 #SIGS4B = [SIG4A1, SIG4A3, SIG4A4]
 
 # We will go for four four-aspect signals here
-SIGSDEF = [sigs.SIG4A1, sigs.SIG4A2, sigs.SIG4A3, sigs.SIG4A4]
+SIGSDEF = [SIG4A1, SIG4A2, SIG4A3, SIG4A4]
