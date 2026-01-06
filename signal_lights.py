@@ -1,7 +1,7 @@
 #
-# crossing_lights.py
+# signal_lights.py
 #
-# Ian Nlair
+# Ian Blair
 #
 # Designed to use MERG CBUS Library (Duncan Greenwood and others)
 # Class for coroutine to control signal lights
@@ -23,7 +23,7 @@ class signal_lights():
         super().__init__()
         self.logger = logger.logger()
         self._signal = []
-        self._signal_pins = []
+        #self._signal_pins = []
                 
     
     def create_signals(self, signals):
@@ -40,33 +40,33 @@ class signal_lights():
                 Pin(sigpins[i],Pin.OUT)
             
              
-    def set_signal(self, signal, aspect):
+    def set_signal(self, signal_id, aspect):
         # signal numbers assumed to start from zero, and hence provide a list index
         # This needs to be checked
         # Indexes above the size of the signal table are ignored (maybe an exception to add?)
-        if signal < len(self._signal)
-            sigdef = self._signal[signal]
-            
+        if (signal_id < len(self._signal)):
+            sigdef = self._signal[signal_id]
             sigpins = list(sigdef.values())
             for i in range (len(sigpins)):
-                sigpins[i].value = _LED_OFF          
-            
-            Convert aspect to dictionary name
-            if aspect_name in sigdef:
-                for aspect_name in sigdef
-                    sigdef.value = _LED_ON
+                sigpins[i].value = _LED_OFF
+                
+            # Convert aspect to dictionary name
+            aspects = list(rsdef.aspects)
+            aspect_name = aspects[aspect]
+
+            if (aspect_name in sigdef):
+                sigdef[aspect_name].value = _LED_ON
                 sigdef.pop(aspect_name)
             
-            if (aspect_name == _DOUBLE_YELLOW)
+            if (aspect_name == rsdefs.ASPECT_DOUBLE_YELLOW):
                 # find entry for yellow and turn this LED too
-                d = sigdef.pop(_YELLOW)
-                     d.value = _LED_ON
+                d = sigdef.pop(rsdefs.ASPECT_YELLOW)
+                d.value = _LED_ON
             
 
-    def clear_signal(self, signal):
-        if signal < len(self._signal)
-            sigdef = self._signal[signal]
-            
+    def clear_signal(self, signal_id):
+        if (signal_id < len(self._signal)):
+            sigdef = self._signal[signal_id]     
             sigpins = list(sigdef.values())
             for i in range (len(sigpins)):
                 sigpins[i].value = _LED_OFF 

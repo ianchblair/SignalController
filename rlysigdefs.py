@@ -2,10 +2,20 @@
 # Signals using a 16 output interface
 
 import pindefs_Pico0203 as pins
+#from enum import Enum
+
+def enum(*sequential, **named):
+    enums = dict(zip(sequential, range(len(sequential))), **named)
+    return type('Enum', (), enums)
 
 #Array of the above
 #PIN_OPS = [PIN_OP_0, PIN_OP_1, PIN_OP_2, PIN_OP_3, PIN_OP_4, PIN_OP_5, PIN_OP_6, PIN_OP_7,PIN_OP_8, PIN_OP_9, PIN_OP_10, PIN_OP_11, PIN_OP_12, PIN_OP_13, PIN_OP_14, PIN_OP_15]
 
+# Enumeration of aspects
+# (Feathered aspects to be added)
+Aspects = enum (ASPECT_RED=0, ASPECT_YELLOW=1, ASPECT_GREEN=2, ASPECT_DOUBLE_YELLOW=3)
+
+#Aspect.ASPECT_RED etc...
 
 # These for multiple types of the same signal
 #
